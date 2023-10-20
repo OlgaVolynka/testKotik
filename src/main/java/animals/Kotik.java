@@ -142,9 +142,9 @@ public class Kotik {
 
             eat();
 
-            result = (i + 1) + " - поел";
+            result = i + " - поел";
         } else
-            result = (i + 1) + " - " + string;
+            result = i + " - " + string;
         return result;
     }
 }

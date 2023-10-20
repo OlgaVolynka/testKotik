@@ -27,7 +27,7 @@ public class Application {
         System.out.println("Всего создано котиков: " + kotikOne.getCount());
     }
 
-    public static Boolean compareVoice(Kotik KotikOne, Kotik kotikTwo) {
+    public static boolean compareVoice(Kotik KotikOne, Kotik kotikTwo) {
         if (kotikTwo.getVoice().equals(KotikOne.getVoice())) return true;
         return false;
     }
