@@ -140,7 +140,7 @@ public class Kotik {
         String result;
 
         if (!ok) {
-            Scanner in = new Scanner(System.in);
+           /* Scanner in = new Scanner(System.in);
             System.out.println("чем покормим котика?");
             String foodName = in.nextLine();
             System.out.println("сколько покормить котика?");
@@ -151,7 +151,8 @@ public class Kotik {
                 eat(countFood);
             } else if (!foodName.isBlank()) {
                 eat(countFood, foodName);
-            } else eat();
+            } else eat();*/
+            eat();
 
             result = (i + 1) + " - поел";
         } else

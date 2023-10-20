@@ -1,5 +1,3 @@
-package sourse;
-
 import animals.Kotik;
 
 import java.util.ArrayList;
