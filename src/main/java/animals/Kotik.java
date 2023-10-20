@@ -1,7 +1,6 @@
 package animals;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Kotik {
 
@@ -26,23 +25,23 @@ public class Kotik {
         count++;
     }
 
-    public Boolean play() {
+    public boolean play() {
         return doSomething("Я пошел играть");
     }
 
-    public Boolean sleep() {
+    public boolean sleep() {
         return doSomething("Я пошел спать");
     }
 
-    public Boolean wash() {
+    public boolean wash() {
         return doSomething("Я пошел мыться");
     }
 
-    public Boolean walk() {
+    public boolean walk() {
         return doSomething("Я ушел гулять");
     }
 
-    public Boolean hunt() {
+    public boolean hunt() {
         return doSomething("Я пошел на охоту");
     }
 
@@ -60,26 +59,26 @@ public class Kotik {
         eat(1, "Вкусняшка");
     }
 
-    public ArrayList<String> liveAnotherDay() {
-        ArrayList<String> myArray = new ArrayList<>();
+    public String[] liveAnotherDay() {
 
+        String[] myArray = new String[24];
         for (int i = 0; i < 24; i++) {
             int action = (int) (Math.random() * METHODS) + 1;
             switch (action) {
                 case 1:
-                    myArray.add(checkAction(i, play(), "поиграл"));
+                    myArray[i] = checkAction(i, play(), "поиграл");
                     break;
                 case 2:
-                    myArray.add(checkAction(i, sleep(), "поспал"));
+                    myArray[i] = checkAction(i, sleep(), "поспал");
                     break;
                 case 3:
-                    myArray.add(checkAction(i, walk(), "погулял"));
+                    myArray[i] = checkAction(i, walk(), "погулял");
                     break;
                 case 4:
-                    myArray.add(checkAction(i, wash(), "помылся"));
+                    myArray[i] = checkAction(i, wash(), "помылся");
                     break;
                 case 5:
-                    myArray.add(checkAction(i, hunt(), "поохотился"));
+                    myArray[i] = checkAction(i, hunt(), "поохотился");
                     break;
                 default:
                     System.out.println("Что то пошло не так");
@@ -120,7 +119,7 @@ public class Kotik {
         return weight;
     }
 
-    public int getCount() {
+    public static int getCount() {
         return count;
     }
 
@@ -140,18 +139,7 @@ public class Kotik {
         String result;
 
         if (!ok) {
-           /* Scanner in = new Scanner(System.in);
-            System.out.println("чем покормим котика?");
-            String foodName = in.nextLine();
-            System.out.println("сколько покормить котика?");
-            Integer countFood = in.nextInt();
-            if (foodName.isBlank() & countFood == 0) {
-                eat();
-            } else if (foodName.isBlank()) {
-                eat(countFood);
-            } else if (!foodName.isBlank()) {
-                eat(countFood, foodName);
-            } else eat();*/
+
             eat();
 
             result = (i + 1) + " - поел";

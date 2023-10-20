@@ -14,7 +14,7 @@ public class Application {
         kotikOne.setSatiety(3);
         kotikOne.setWeight(4);
 
-        ArrayList<String> resultKotikOne = kotikOne.liveAnotherDay();
+        String[] resultKotikOne = kotikOne.liveAnotherDay();
         for (String string : resultKotikOne) {
             System.out.println(string);
         }
@@ -22,12 +22,12 @@ public class Application {
         System.out.println("Котика 1 зовут: " + kotikOne.getName());
         System.out.println("Вес котика 1: " + kotikOne.getWeight());
 
-        System.out.println("Сравниваем голоса котиков, они одинаковые? " + compareCatsVoice(kotikOne, kotikTwo));
+        System.out.println("Сравниваем голоса котиков, они одинаковые? " + compareVoice(kotikOne, kotikTwo));
 
         System.out.println("Всего создано котиков: " + kotikOne.getCount());
     }
 
-    public static Boolean compareCatsVoice(Kotik KotikOne, Kotik kotikTwo) {
+    public static Boolean compareVoice(Kotik KotikOne, Kotik kotikTwo) {
         if (kotikTwo.getVoice().equals(KotikOne.getVoice())) return true;
         return false;
     }
